@@ -5,7 +5,14 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 void recursiveBispo(int i){
-    
+    do {
+        printf("-> Cima!\n");
+        for (int a = 1; a <= i; a--){
+            printf("-> Direita!\n");
+            break;
+        }
+    } while (i-- && i > 0);
+}
 
 void recursiveTorre(int j){
     if (j > 0){
@@ -27,7 +34,7 @@ int main() {
     int i = 5;
     recursiveBispo(i);
     
-    printf("MOVIMENTAÇÃO DA TORRE:\n");
+    printf("\nMOVIMENTAÇÃO DA TORRE:\n");
     int j = 5; // Inicializando o contador.
     recursiveTorre(j);
 
